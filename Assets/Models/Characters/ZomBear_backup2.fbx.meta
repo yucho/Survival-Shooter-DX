@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 2c2e774108261c94aae04cb9069d3c24
+timeCreated: 1430764901
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Ctrl_Grp
+    100002: Head
+    100004: HeadEnd
+    100006: HeadEnd_end
+    100008: Hips
+    100010: LeftEar
+    100012: LeftEarEnd
+    100014: LeftEarEnd_end
+    100016: LeftFoot
+    100018: LeftFootEnd
+    100020: LeftFootEnd_end
+    100022: LeftLeg
+    100024: LeftLowerArm
+    100026: LeftLowerArmFK
+    100028: LeftLowerArmIK
+    100030: LeftUpperArm
+    100032: LeftUpperArmFK
+    100034: LeftUpperArmIK
+    100036: LeftWrist
+    100038: LeftWristEnd
+    100040: LeftWristEnd_end
+    100042: LeftWristFK
+    100044: LeftWristFK_end
+    100046: LeftWristIK
+    100048: LeftWristIK_end
+    100050: RightEar
+    100052: RightEarEnd
+    100054: RightEarEnd_end
+    100056: RightFoot
+    100058: RightFootEnd
+    100060: RightFootEnd_end
+    100062: RightLeg
+    100064: RightLowerArm
+    100066: RightLowerArmFK
+    100068: RightLowerArmIK
+    100070: RightUpperArm
+    100072: RightUpperArmFK
+    100074: RightUpperArmIK
+    100076: RightWrist
+    100078: RightWristEnd
+    100080: RightWristEnd_end
+    100082: RightWristFK
+    100084: RightWristFK_end
+    100086: RightWristIK
+    100088: RightWristIK_end
+    100090: Root
+    100092: Spine
+    100094: //RootNode
+    100096: Zombear
+    400000: Ctrl_Grp
+    400002: Head
+    400004: HeadEnd
+    400006: HeadEnd_end
+    400008: Hips
+    400010: LeftEar
+    400012: LeftEarEnd
+    400014: LeftEarEnd_end
+    400016: LeftFoot
+    400018: LeftFootEnd
+    400020: LeftFootEnd_end
+    400022: LeftLeg
+    400024: LeftLowerArm
+    400026: LeftLowerArmFK
+    400028: LeftLowerArmIK
+    400030: LeftUpperArm
+    400032: LeftUpperArmFK
+    400034: LeftUpperArmIK
+    400036: LeftWrist
+    400038: LeftWristEnd
+    400040: LeftWristEnd_end
+    400042: LeftWristFK
+    400044: LeftWristFK_end
+    400046: LeftWristIK
+    400048: LeftWristIK_end
+    400050: RightEar
+    400052: RightEarEnd
+    400054: RightEarEnd_end
+    400056: RightFoot
+    400058: RightFootEnd
+    400060: RightFootEnd_end
+    400062: RightLeg
+    400064: RightLowerArm
+    400066: RightLowerArmFK
+    400068: RightLowerArmIK
+    400070: RightUpperArm
+    400072: RightUpperArmFK
+    400074: RightUpperArmIK
+    400076: RightWrist
+    400078: RightWristEnd
+    400080: RightWristEnd_end
+    400082: RightWristFK
+    400084: RightWristFK_end
+    400086: RightWristIK
+    400088: RightWristIK_end
+    400090: Root
+    400092: Spine
+    400094: //RootNode
+    400096: Zombear
+    4300000: Zombear
+    7400000: Ctrl_Grp|Ctrl_Grp.001|Ctrl_Grp|Ctrl_Grp|Take 001|BaseLayer|Ctrl_Grp|.000
+    7400002: Ctrl_Grp|Ctrl_Grp.001|Ctrl_Grp|Ctrl_Grp|Take 001|BaseLayer|Ctrl_Grp|Ctrl
+    9500000: //RootNode
+    13700000: Zombear
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

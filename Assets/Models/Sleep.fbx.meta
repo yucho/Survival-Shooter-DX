@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 7631b73a9817ffc4eaf7934116deb186
+timeCreated: 1431055646
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Hat1
+    100002: Hat2
+    100004: Hat3
+    100006: Hat4
+    100008: Hat5
+    100010: HatEnd
+    100012: HatEnd_end
+    100014: Head
+    100016: Hips
+    100018: HipSway
+    100020: LeftBrow1
+    100022: LeftBrow1End
+    100024: LeftBrow1End_end
+    100026: LeftBrow2
+    100028: LeftBrow2End
+    100030: LeftBrow2End_end
+    100032: LeftBrow3
+    100034: LeftBrow3End
+    100036: LeftBrow3End_end
+    100038: LeftHand1
+    100040: LeftHand2
+    100042: LeftHand2_end
+    100044: LeftLeg
+    100046: LeftLowerArm
+    100048: LeftLowerArm2
+    100050: LeftLowerArm2_IK
+    100052: LeftLowerArm_2_FK
+    100054: LeftLowerArm_FK
+    100056: LeftLowerArm_IK
+    100058: LeftShoulder
+    100060: LeftThumb1
+    100062: LeftThumb2
+    100064: LeftThumb2_end
+    100066: LeftToe
+    100068: LeftToe_end
+    100070: LeftUpperArm
+    100072: LeftUpperArm_FK
+    100074: LeftUpperArm_IK
+    100076: LeftWrist
+    100078: LeftWrist_FK
+    100080: LeftWrist_FK_end
+    100082: LeftWrist_IK
+    100084: LeftWrist_IK_end
+    100086: RightBrow1
+    100088: RightBrow1End
+    100090: RightBrow1End_end
+    100092: RightBrow2
+    100094: RightBrow2End
+    100096: RightBrow2End_end
+    100098: RightBrow3
+    100100: RightBrow3End
+    100102: RightBrow3End_end
+    100104: RightHand1
+    100106: RightHand2
+    100108: RightHand2_end
+    100110: RightLeg
+    100112: RightLowerArm
+    100114: RightLowerArm2
+    100116: RightLowerArm2_FK
+    100118: RightLowerArm2_IK
+    100120: RightLowerArm_FK
+    100122: RightLowerArm_IK
+    100124: RightShoulder
+    100126: RightThumb1
+    100128: RightThumb2
+    100130: RightThumb2_end
+    100132: RightToe
+    100134: RightToe_end
+    100136: RightUpperArm
+    100138: RightUpperArm_FK
+    100140: RightUpperArm_IK
+    100142: RightWrist
+    100144: RightWrist_FK
+    100146: RightWrist_FK_end
+    100148: RightWrist_IK
+    100150: RightWrist_IK_end
+    100152: Root
+    100154: //RootNode
+    100156: Spine
+    100158: Tail1
+    100160: Tail2
+    100162: Tail3
+    100164: Tail3_end
+    100166: Armature
+    100168: Player
+    100170: PlayerCtrl
+    400000: Hat1
+    400002: Hat2
+    400004: Hat3
+    400006: Hat4
+    400008: Hat5
+    400010: HatEnd
+    400012: HatEnd_end
+    400014: Head
+    400016: Hips
+    400018: HipSway
+    400020: LeftBrow1
+    400022: LeftBrow1End
+    400024: LeftBrow1End_end
+    400026: LeftBrow2
+    400028: LeftBrow2End
+    400030: LeftBrow2End_end
+    400032: LeftBrow3
+    400034: LeftBrow3End
+    400036: LeftBrow3End_end
+    400038: LeftHand1
+    400040: LeftHand2
+    400042: LeftHand2_end
+    400044: LeftLeg
+    400046: LeftLowerArm
+    400048: LeftLowerArm2
+    400050: LeftLowerArm2_IK
+    400052: LeftLowerArm_2_FK
+    400054: LeftLowerArm_FK
+    400056: LeftLowerArm_IK
+    400058: LeftShoulder
+    400060: LeftThumb1
+    400062: LeftThumb2
+    400064: LeftThumb2_end
+    400066: LeftToe
+    400068: LeftToe_end
+    400070: LeftUpperArm
+    400072: LeftUpperArm_FK
+    400074: LeftUpperArm_IK
+    400076: LeftWrist
+    400078: LeftWrist_FK
+    400080: LeftWrist_FK_end
+    400082: LeftWrist_IK
+    400084: LeftWrist_IK_end
+    400086: RightBrow1
+    400088: RightBrow1End
+    400090: RightBrow1End_end
+    400092: RightBrow2
+    400094: RightBrow2End
+    400096: RightBrow2End_end
+    400098: RightBrow3
+    400100: RightBrow3End
+    400102: RightBrow3End_end
+    400104: RightHand1
+    400106: RightHand2
+    400108: RightHand2_end
+    400110: RightLeg
+    400112: RightLowerArm
+    400114: RightLowerArm2
+    400116: RightLowerArm2_FK
+    400118: RightLowerArm2_IK
+    400120: RightLowerArm_FK
+    400122: RightLowerArm_IK
+    400124: RightShoulder
+    400126: RightThumb1
+    400128: RightThumb2
+    400130: RightThumb2_end
+    400132: RightToe
+    400134: RightToe_end
+    400136: RightUpperArm
+    400138: RightUpperArm_FK
+    400140: RightUpperArm_IK
+    400142: RightWrist
+    400144: RightWrist_FK
+    400146: RightWrist_FK_end
+    400148: RightWrist_IK
+    400150: RightWrist_IK_end
+    400152: Root
+    400154: //RootNode
+    400156: Spine
+    400158: Tail1
+    400160: Tail2
+    400162: Tail3
+    400164: Tail3_end
+    400166: Armature
+    400168: Player
+    400170: PlayerCtrl
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Player
+    7400000: Armature|ArmatureAction
+    7400002: Armature|ArmatureAction.001
+    7400004: Armature|Armature|Take 001|BaseLayer
+    7400006: Armature|ColchaAction
+    7400008: Armature|PlayerAction
+    7400010: Armature|Sleep
+    7400012: Player|ColchaAction.002
+    7400014: Player|Sleep
+    7400016: Player|ColchaAction
+    7400018: Player|PlayerAction
+    7400020: Sleep
+    9500000: //RootNode
+    13700000: Player
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Sleep
+      takeName: Armature|Sleep
+      firstFrame: 0
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player
+        weight: 1
+      - path: PlayerCtrl
+        weight: 1
+      - path: PlayerCtrl/Armature
+        weight: 1
+      - path: PlayerCtrl/Armature/Root
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/LeftLeg/LeftToe/LeftToe_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/HipSway/RightLeg/RightToe/RightToe_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd/HatEnd_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End/LeftBrow1End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End/LeftBrow2End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End/LeftBrow3End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End/RightBrow1End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End/RightBrow2End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End/RightBrow3End_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1/LeftHand2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1/LeftHand2/LeftHand2_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1/LeftThumb2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1/LeftThumb2/LeftThumb2_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_FK/LeftLowerArm_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_FK/LeftLowerArm_FK/LeftLowerArm_2_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_FK/LeftLowerArm_FK/LeftLowerArm_2_FK/LeftWrist_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_FK/LeftLowerArm_FK/LeftLowerArm_2_FK/LeftWrist_FK/LeftWrist_FK_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_IK/LeftLowerArm_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_IK/LeftLowerArm_IK/LeftLowerArm2_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_IK/LeftLowerArm_IK/LeftLowerArm2_IK/LeftWrist_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm_IK/LeftLowerArm_IK/LeftLowerArm2_IK/LeftWrist_IK/LeftWrist_IK_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2/RightHand2_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2/RightThumb2_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_FK/RightLowerArm_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_FK/RightLowerArm_FK/RightLowerArm2_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_FK/RightLowerArm_FK/RightLowerArm2_FK/RightWrist_FK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_FK/RightLowerArm_FK/RightLowerArm2_FK/RightWrist_FK/RightWrist_FK_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_IK/RightLowerArm_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_IK/RightLowerArm_IK/RightLowerArm2_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_IK/RightLowerArm_IK/RightLowerArm2_IK/RightWrist_IK
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Spine/RightShoulder/RightUpperArm_IK/RightLowerArm_IK/RightLowerArm2_IK/RightWrist_IK/RightWrist_IK_end
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Tail1
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: PlayerCtrl/Armature/Root/Hips/Tail1/Tail2/Tail3/Tail3_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

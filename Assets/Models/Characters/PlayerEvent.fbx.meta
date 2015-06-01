@@ -1,0 +1,1220 @@
+fileFormatVersion: 2
+guid: 5b1ba6419a456a540b7665b0ddf0d3ff
+timeCreated: 1431563973
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Hat1
+    100004: Hat2
+    100006: Hat3
+    100008: Hat4
+    100010: Hat5
+    100012: HatEnd
+    100014: HatEndIK
+    100016: Head
+    100018: Hips
+    100020: HipSway
+    100022: LeftBrow1
+    100024: LeftBrow1End
+    100026: LeftBrow2
+    100028: LeftBrow2End
+    100030: LeftBrow3
+    100032: LeftBrow3End
+    100034: LeftHand1
+    100036: LeftLeg
+    100038: LeftLowerArm
+    100040: LeftLowerArm2
+    100042: LeftShoulder
+    100044: LeftThumb1
+    100046: LeftToe
+    100048: LeftUpperArm
+    100050: LeftWrist
+    100052: LeftWristIK
+    100054: Player
+    100056: //RootNode
+    100058: RightBrow1
+    100060: RightBrow1End
+    100062: RightBrow2
+    100064: RightBrow2End
+    100066: RightBrow3
+    100068: RightBrow3End
+    100070: RightHand1
+    100072: RightHand2
+    100074: RightLeg
+    100076: RightLowerArm
+    100078: RightLowerArm2
+    100080: RightShoulder
+    100082: RightThumb1
+    100084: RightThumb2
+    100086: RightToe
+    100088: RightUpperArm
+    100090: RightWrist
+    100092: RightWristIK
+    100094: Root
+    100096: Spine
+    100098: Tail1
+    100100: Tail2
+    100102: Tail3
+    400000: Armature
+    400002: Hat1
+    400004: Hat2
+    400006: Hat3
+    400008: Hat4
+    400010: Hat5
+    400012: HatEnd
+    400014: HatEndIK
+    400016: Head
+    400018: Hips
+    400020: HipSway
+    400022: LeftBrow1
+    400024: LeftBrow1End
+    400026: LeftBrow2
+    400028: LeftBrow2End
+    400030: LeftBrow3
+    400032: LeftBrow3End
+    400034: LeftHand1
+    400036: LeftLeg
+    400038: LeftLowerArm
+    400040: LeftLowerArm2
+    400042: LeftShoulder
+    400044: LeftThumb1
+    400046: LeftToe
+    400048: LeftUpperArm
+    400050: LeftWrist
+    400052: LeftWristIK
+    400054: Player
+    400056: //RootNode
+    400058: RightBrow1
+    400060: RightBrow1End
+    400062: RightBrow2
+    400064: RightBrow2End
+    400066: RightBrow3
+    400068: RightBrow3End
+    400070: RightHand1
+    400072: RightHand2
+    400074: RightLeg
+    400076: RightLowerArm
+    400078: RightLowerArm2
+    400080: RightShoulder
+    400082: RightThumb1
+    400084: RightThumb2
+    400086: RightToe
+    400088: RightUpperArm
+    400090: RightWrist
+    400092: RightWristIK
+    400094: Root
+    400096: Spine
+    400098: Tail1
+    400100: Tail2
+    400102: Tail3
+    4300000: Player
+    7400000: Move
+    7400002: Idle
+    7400004: Crouch
+    7400006: Crouch Idle
+    7400008: Raise
+    7400010: Raise Idle
+    7400012: Sleep
+    7400014: Wake
+    9500000: //RootNode
+    13700000: Player
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Move
+      takeName: Armature|Event
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|Event
+      firstFrame: 39
+      lastFrame: 164
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch
+      takeName: Armature|Event
+      firstFrame: 169
+      lastFrame: 219
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch Idle
+      takeName: Armature|Event
+      firstFrame: 220
+      lastFrame: 279
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Raise
+      takeName: Armature|Event
+      firstFrame: 280
+      lastFrame: 309
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Raise Idle
+      takeName: Armature|Event
+      firstFrame: 310
+      lastFrame: 369
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Sleep
+      takeName: Armature|Event
+      firstFrame: 451
+      lastFrame: 530
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Wake
+      takeName: Armature|Event
+      firstFrame: 531
+      lastFrame: 659
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips/HipSway
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/LeftLeg/LeftToe
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg
+        weight: 1
+      - path: Armature/Root/Hips/HipSway/RightLeg/RightToe
+        weight: 1
+      - path: Armature/Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/Hat1/Hat2/Hat3/Hat4/Hat5/HatEnd
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/HatEndIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow1/LeftBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow2/LeftBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/LeftBrow3/LeftBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow1/RightBrow1End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow2/RightBrow2End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3
+        weight: 1
+      - path: Armature/Root/Hips/Spine/Head/RightBrow3/RightBrow3End
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftShoulder/LeftUpperArm/LeftLowerArm/LeftLowerArm2/LeftWrist/LeftThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/LeftWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightHand1/RightHand2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightShoulder/RightUpperArm/RightLowerArm/RightLowerArm2/RightWrist/RightThumb1/RightThumb2
+        weight: 1
+      - path: Armature/Root/Hips/Spine/RightWristIK
+        weight: 1
+      - path: Armature/Root/Hips/Tail1
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Player
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

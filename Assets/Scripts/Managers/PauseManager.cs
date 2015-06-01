@@ -1,67 +1,89 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
+
+//  Attach this to any game object in the scene to enable pause.
 public class PauseManager : MonoBehaviour
 {
-	public AudioClip pauseEnter;
-	public float pauseEnterVol = 0.8f;
-	public AudioClip pauseExit;
-	public float pauseExitVol = 0.8f;
 
-	private Canvas canvas;
-	private AudioSource audioSrc;
-	//private AudioListener listener;
+	//  Canvas to enable on pause.
+	public Canvas pressEnterCanvas;
+
+	private bool pauseAllowed;
+	private bool paused;
+	private bool pressEnterToContinue;
+
 
 	void Awake ()
 	{
-		canvas = GetComponent <Canvas> ();
-		audioSrc = GetComponent <AudioSource> ();
-		audioSrc.ignoreListenerVolume = true;
-		//listener = FindObjectOfType <AudioListener> ();
+		NotificationCentre.AddObserver (this, "PauseAllow");
+		NotificationCentre.AddObserver (this, "PauseDisallow");
+		NotificationCentre.AddObserver (this, "Pause");
+		NotificationCentre.AddObserver (this, "PressEnterToContinue");
+
+		pauseAllowed = false;
+		paused = false;
+		pressEnterToContinue = false;
 	}
 
+	
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (pressEnterToContinue && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape)))
 		{
-			canvas.enabled = !canvas.enabled;
+			PressEnterToContinue (false);
+			NotificationCentre.PostNotification (this, "Continue");
+		}
+		else if (pauseAllowed && Input.GetKeyDown(KeyCode.Escape))
+		{
 			Pause ();
-			AudioEffect ();
 		}
 	}
+
+	public void PauseAllow () { pauseAllowed = true; }
+	public void PauseDisallow () { pauseAllowed = false; }
+
 
 	public void Pause ()
 	{
-		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-	}
+		paused = !paused;
 
-	public void Quit ()
-	{
-#if UNITY_EDITOR 
-		EditorApplication.isPlaying = false;
-#else 
-		Application.Quit();
-#endif
-	}
+		Time.timeScale = paused ? 0 : 1;
 
-	void AudioEffect ()
-	{
-		if (canvas.enabled)
-		{
-			audioSrc.clip = pauseEnter;
-			audioSrc.volume = pauseEnterVol;
-			AudioListener.volume = 0.2f;
-		}
+		if (paused)
+			NotificationCentre.PostNotification (this, "OnPauseEnter");
 		else
-		{
-			audioSrc.clip = pauseExit;
-			audioSrc.volume = pauseExitVol;
-			AudioListener.volume = 1f;
-		}
-		audioSrc.Play ();
+			NotificationCentre.PostNotification (this, "OnPauseExit");
+
+		//  Dim all sounds. Set AudioSource.ignoreListenerVolume to ignore this.
+		DimAudio ();
+	}
+
+
+	// Call this to pause the game and display Press Enter canvas.
+	public void PressEnterToContinue ()
+	{
+		PressEnterToContinue (true);
+	}
+
+
+	public void PressEnterToContinue (bool enable)
+	{
+		pressEnterToContinue = enable;
+
+		Time.timeScale = enable ? 0 : 1;
+
+		if (pressEnterCanvas)
+			pressEnterCanvas.enabled = enable;
+	}
+	
+
+	void DimAudio ()
+	{
+		if (Time.timeScale == 0)
+			AudioListener.volume = 0.2f;
+		else
+			AudioListener.volume = 1;
 	}
 }

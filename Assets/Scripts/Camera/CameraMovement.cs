@@ -1,22 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//[RequireComponent (typeof(Camera))]
 public class CameraMovement : MonoBehaviour
 {
+
 	public Transform target;
 	public float smoothness;
 
 	private bool follow;
-	private Vector3 offset;
+	private Vector3 offset = Vector3.zero;
+	
 
-	void Start () {
-		offset = transform.position - target.position;
+	void Start ()
+	{
+		if (target)
+			offset = transform.position - target.position;
+
 		follow = true;
 	}
 
+
 	void FixedUpdate ()
 	{
-		if (follow)
+		if (follow && target)
 		{
 			Vector3 targetCamPos = target.position + offset;
 
@@ -47,5 +54,10 @@ public class CameraMovement : MonoBehaviour
 	public void CameraLookAt (Transform position)
 	{
 		transform.LookAt (position.position);
+	}
+
+	public void SetCameraAngle (Quaternion angle)
+	{
+		transform.rotation = angle;
 	}
 }

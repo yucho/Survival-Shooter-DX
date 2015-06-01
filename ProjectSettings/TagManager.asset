@@ -8,6 +8,7 @@ TagManager:
   - VisualEffect
   - SpawnPoints
   - BGM
+  - PlayerEvent
   layers:
   - Default
   - TransparentFX

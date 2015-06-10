@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EnemyManager : MonoBehaviour
+public class PlayRoomEnemyController : MonoBehaviour
 {
     private EnemySpawn [] spawnPoints;
 

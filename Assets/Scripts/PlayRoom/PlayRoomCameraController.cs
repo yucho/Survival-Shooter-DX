@@ -18,6 +18,9 @@ public class PlayRoomCameraController : MonoBehaviour
 	{
 		NotificationCentre.AddObserver (this, "OnIntroEvent");
 		NotificationCentre.AddObserver (this, "OnIntroEventExit");
+		NotificationCentre.AddObserver (this, "OnPickUpGun");
+		NotificationCentre.AddObserver (this, "OnHoldingGunHigh");
+		NotificationCentre.AddObserver (this, "OnPlayerActivate");
 
 		//player = GameObject.FindWithTag ("Player");
 		pe = GameObject.FindWithTag ("PlayerEvent");
@@ -87,6 +90,34 @@ public class PlayRoomCameraController : MonoBehaviour
 	}
 
 
+	IEnumerator OnPickUpGun ()
+	{
+		if (pe && cam)
+		{
+			cam.SetCameraFollow (false);
+			SetCamPosRot (new Vector3 (22,2,-2), new Vector3 (60,0,0));
+
+			yield return new WaitForSeconds(3);
+
+			StartCoroutine (MovLocRot (new Vector3 (0,1,-1), Vector3.zero, 1));
+			yield return null;
+		}
+	}
+
+
+	IEnumerator OnHoldingGunHigh ()
+	{
+		if (pe && cam)
+			StartCoroutine (MovLocRot (new Vector3 (-0.5f,0.5f,0.5f), Vector3.zero, 0.2f));
+
+		yield return null;
+	}
+
+
+	void OnPlayerActivate ()
+	{
+		SetCamPosRot (new Vector3 (21.5f,0.5f,-3), new Vector3 (-5,0,0));
+	}
 
 
 
@@ -94,6 +125,28 @@ public class PlayRoomCameraController : MonoBehaviour
 	{
 		cam.transform.position = pos;
 		cam.transform.rotation = Quaternion.Euler (euler);
+	}
+
+	// Pass offset parameters as they get added to current loc & rot.
+	IEnumerator MovLocRot (Vector3 loc, Vector3 angles, float duration)
+	{
+		Vector3 locA = cam.transform.position;
+		Vector3 locB = locA + loc;
+		Quaternion rotA = cam.transform.rotation;
+		Quaternion rotB = rotA * Quaternion.Euler (angles);
+
+		float timer = 0;
+		while (true)
+		{
+			cam.transform.position = Vector3.Lerp (locA, locB, timer / duration);
+			cam.transform.rotation = Quaternion.Lerp (rotA, rotB, timer / duration);
+
+			if (timer >= duration)
+				break;
+			
+			timer += Time.deltaTime;
+			yield return null;
+		}
 	}
 }
 

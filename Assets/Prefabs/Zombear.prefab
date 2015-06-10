@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451380}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440398}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412568}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: HeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497536}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftEarEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465712}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftEar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - 136: {fileID: 13627928}
   - 114: {fileID: 11464102}
   - 114: {fileID: 11421004}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Zombear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 413140}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 475166}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftLowerArmFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441852}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightLowerArmFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432058}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 403108}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477524}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 479290}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: HeadEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432526}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494970}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406634}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightUpperArmFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479608}
   - 65: {fileID: 6536966}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Hit Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446066}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightEarEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460042}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftLowerArmIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - 4: {fileID: 442872}
   - 199: {fileID: 19990954}
   - 198: {fileID: 19885546}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: HitParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 423906}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftUpperArmIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497566}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightLowerArmIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486828}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498178}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 434572}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightEarEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 461812}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406410}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 492380}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftUpperArmFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - 65: {fileID: 6530480}
   - 54: {fileID: 5496778}
   - 114: {fileID: 11413140}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Hit Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458880}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftLowerArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485346}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438234}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462190}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristIK_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419242}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftFootEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 452590}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450394}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftUpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442434}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightEar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478000}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488942}
   - 137: {fileID: 13796858}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Zombear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459098}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftEarEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498260}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristIK_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401682}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristFK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444392}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446380}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightUpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442056}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristFK_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446038}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Ctrl_Grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476528}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightLowerArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490418}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 492074}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightWristEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433056}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightUpperArmIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484224}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RightFootEnd_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494814}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LeftWristFK_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1567,7 +1567,6 @@ MonoBehaviour:
   startingHealth: 200
   currentHealth: 0
   shrinkSpeed: 2
-  scoreValue: 10
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
   hurtClip: {fileID: 8300000, guid: 1d4840678e677424b8921716c72397ea, type: 3}
 --- !u!114 &11464102

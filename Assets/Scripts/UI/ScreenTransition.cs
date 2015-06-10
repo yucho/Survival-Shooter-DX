@@ -10,11 +10,12 @@ public class ScreenTransition : MonoBehaviour
 {
 
 	private Image img;
-
+	private IEnumerator lastCoroutine;
 
 	void Awake ()
 	{
 		img = GetComponent<Image> ();
+		lastCoroutine = null;
 
 		// Register on Awake so you won't miss any early notification.
 		NotificationCentre.AddObserver (this, "OnNewGame");
@@ -28,27 +29,36 @@ public class ScreenTransition : MonoBehaviour
 	IEnumerator OnNewGame ()
 	{
 		yield return new WaitForSeconds (3f);
-		StartCoroutine (Fade (Color.clear, Color.white, 4f));
+		StopCoroutine (lastCoroutine);
+		lastCoroutine = Fade (Color.clear, Color.white, 4f);
+		StartCoroutine (lastCoroutine);
 	}
 
 
 	// Transition into Play Room scene from Title Scene.
 	IEnumerator OnIntroEvent ()
 	{
-		yield return StartCoroutine (Fade (Color.white, Color.black, 0.5f));
-		StartCoroutine (Fade (Color.black, Color.clear));
+		StopCoroutine (lastCoroutine);
+		lastCoroutine = Fade (Color.white, Color.black, 0.5f);
+		yield return StartCoroutine (lastCoroutine);
+		lastCoroutine = Fade (Color.black, Color.clear);
+		StartCoroutine (lastCoroutine);
 	}
 
 
 	void OnFadeIn ()
 	{
-		StartCoroutine (Fade (Color.black, Color.clear));
+		StopCoroutine (lastCoroutine);
+		lastCoroutine = Fade (Color.black, Color.clear);
+		StartCoroutine (lastCoroutine);
 	}
 
 
 	void OnFadeOut ()
 	{
-		StartCoroutine (Fade (Color.clear, Color.black));
+		StopCoroutine (lastCoroutine);
+		lastCoroutine = Fade (Color.clear, Color.black);
+		StartCoroutine (lastCoroutine);
 	}
 
 
@@ -67,5 +77,12 @@ public class ScreenTransition : MonoBehaviour
 			done = t >= time;
 			t += Time.deltaTime;
 		}
+	}
+
+
+	public new void StopCoroutine (IEnumerator routine)
+	{
+		if (routine != null)
+			base.StopCoroutine (routine);
 	}
 }

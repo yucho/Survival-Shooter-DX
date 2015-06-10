@@ -9,8 +9,7 @@ public class PlayRoomPlayerController : MonoBehaviour
 {
 
 	private GameObject player;
-	//private MeshRenderer [] meshes;
-	//private SkinnedMeshRenderer [] skins;
+	private PlayerShooting gun;
 
 
 	void Awake ()
@@ -18,6 +17,7 @@ public class PlayRoomPlayerController : MonoBehaviour
 		//NotificationCentre.AddObserver (this, "OnEventEnter");
 		//NotificationCentre.AddObserver (this, "OnEventExit");
 		NotificationCentre.AddObserver (this, "OnIntroEvent");
+		NotificationCentre.AddObserver (this, "OnPlayerActivate");
 
 		GetPlayer ();
 	}
@@ -29,8 +29,7 @@ public class PlayRoomPlayerController : MonoBehaviour
 		
 		if (player)
 		{
-			//meshes = player.GetComponentsInChildren<MeshRenderer> ();
-			//skins = player.GetComponentsInChildren<SkinnedMeshRenderer> ();
+			gun = player.GetComponentInChildren<PlayerShooting> ();
 		}
 	}
 
@@ -39,5 +38,43 @@ public class PlayRoomPlayerController : MonoBehaviour
 	{
 		if (player)
 			player.SetActive (false);
+	}
+
+
+	IEnumerator OnPlayerActivate ()
+	{
+		if (player)
+		{
+			player.SetActive (true);
+			gun.enabled = false;
+			SetPlayerPosRot(new Vector3 (21.5f,0,-1), new Vector3 (0,180,0));
+
+			yield return new WaitForSeconds (1.5f);
+
+			/*
+			Quaternion rotA = player.transform.rotation;
+			Quaternion rotB = Quaternion.Euler (0,90,0);
+			float timer = 0;
+			while (true)
+			{
+				player.transform.rotation = Quaternion.Lerp (rotA, rotB, timer / 0.5f);
+				
+				if (timer >= 0.5f)
+					break;
+				
+				timer += Time.deltaTime;
+				yield return null;
+			}
+			*/
+			Debug.Log ("About to call MovLocRot");
+			yield return StartCoroutine(CustomUtilities.MovLocRot(player, Vector3.zero, new Vector3(0,90,0), 0.5f));
+		}
+	}
+
+
+	void SetPlayerPosRot (Vector3 pos, Vector3 euler)
+	{
+		player.transform.position = pos;
+		player.transform.rotation = Quaternion.Euler (euler);
 	}
 }

@@ -26,16 +26,24 @@ public class HowToPlay : MonoBehaviour
 		if (coroutine != null)
 			StopCoroutine (coroutine);
 
-		coroutine = AlphaLerp (0, 1, 0.5f);
+		coroutine = AlphaLerp (0, 1, 0.25f);
 		yield return StartCoroutine (coroutine);
 
-		NotificationCentre.PostNotification (this, "PressEnterToContinue");
+		Hashtable data = new Hashtable();
+		data.Add ("HowToPlay", null);
+		NotificationCentre.PostNotification (this, "PressEnterToContinue", data);
 	}
 
 
-	void Continue ()
+	void Continue (Notification value)
 	{
-		StartCoroutine (HideHowToPlay ());
+		if (value.data.ContainsKey ("HowToPlay"))
+		{
+			// This code gives "list changed" error.
+			//NotificationCentre.RemoveObserver (this, "Continue");
+			StartCoroutine (HideHowToPlay ());
+			NotificationCentre.PostNotification (this, "OnEventExit");
+		}
 	}
 
 	IEnumerator HideHowToPlay ()
@@ -44,7 +52,7 @@ public class HowToPlay : MonoBehaviour
 			StopCoroutine (coroutine);
 
 		yield return 1;
-		coroutine = AlphaLerp (1, 0, 0.5f);
+		coroutine = AlphaLerp (1, 0, 0.25f);
 		yield return StartCoroutine (coroutine);
 	}
 

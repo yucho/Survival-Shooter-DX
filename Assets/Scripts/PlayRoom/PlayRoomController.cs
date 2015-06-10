@@ -24,10 +24,12 @@ public class PlayRoomController : MonoBehaviour
 		{
 			case "Title Scene" :
 				NotificationCentre.PostNotification (this, "OnEventEnter");
+				NotificationCentre.PostNotification (this, "OnBGMFadeIn");
 				NotificationCentre.PostNotification (this, "OnIntroEvent");
 				break;
 			default :
 				NotificationCentre.PostNotification (this, "OnFadeIn");
+				NotificationCentre.PostNotification (this, "OnBGMFadeIn");
 				break;
 		}
 	}

@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -63,7 +63,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyHitBox.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Enemy\MovementTrackPlayer.cs" />
-     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\DisplayTextCenter.cs" />
      <Compile Include="Assets\Scripts\Managers\ExceptionHandler.cs" />
      <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
@@ -79,6 +79,8 @@
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomBGMController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomCameraController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomController.cs" />
+     <Compile Include="Assets\Scripts\PlayRoom\PlayRoomEnemyController.cs" />
+     <Compile Include="Assets\Scripts\PlayRoom\PlayRoomGunCollider.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomPlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomPlayerEventController.cs" />
      <Compile Include="Assets\Scripts\Player\HealthPoint.cs" />
@@ -93,8 +95,11 @@
      <Compile Include="Assets\Scripts\Title\TitleCanvasGroup.cs" />
      <Compile Include="Assets\Scripts\Title\TitleController.cs" />
      <Compile Include="Assets\Scripts\UI\LoadingIcon.cs" />
+     <Compile Include="Assets\Scripts\UI\MoveUpAndDown.cs" />
      <Compile Include="Assets\Scripts\UI\ScreenTransition.cs" />
      <Compile Include="Assets\Scripts\UI\Splatter.cs" />
+     <Compile Include="Assets\Scripts\Utilities\CoroutineUtilities.cs" />
+     <Compile Include="Assets\Scripts\Utilities\CustomUtilities.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Enemy\EnemyHealth.cs" />

@@ -14,6 +14,8 @@ public class PauseManager : MonoBehaviour
 	private bool paused;
 	private bool pressEnterToContinue;
 
+	private Notification continueNotification;
+
 
 	void Awake ()
 	{
@@ -33,7 +35,7 @@ public class PauseManager : MonoBehaviour
 		if (pressEnterToContinue && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape)))
 		{
 			PressEnterToContinue (false);
-			NotificationCentre.PostNotification (this, "Continue");
+			NotificationCentre.PostNotification (this, "Continue", continueNotification.data);
 		}
 		else if (pauseAllowed && Input.GetKeyDown(KeyCode.Escape))
 		{
@@ -62,9 +64,12 @@ public class PauseManager : MonoBehaviour
 
 
 	// Call this to pause the game and display Press Enter canvas.
-	public void PressEnterToContinue ()
+	// Make sure to post Hashtable data to distinguish yourself from other callers. 
+	internal void PressEnterToContinue (Notification value)
 	{
 		PressEnterToContinue (true);
+
+		continueNotification = value;
 	}
 
 
@@ -72,7 +77,7 @@ public class PauseManager : MonoBehaviour
 	{
 		pressEnterToContinue = enable;
 
-		Time.timeScale = enable ? 0 : 1;
+		//Time.timeScale = enable ? 0 : 1;
 
 		if (pressEnterCanvas)
 			pressEnterCanvas.enabled = enable;

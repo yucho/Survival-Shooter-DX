@@ -18,6 +18,7 @@ public class PlayRoomPlayerController : MonoBehaviour
 		//NotificationCentre.AddObserver (this, "OnEventExit");
 		NotificationCentre.AddObserver (this, "OnIntroEvent");
 		NotificationCentre.AddObserver (this, "OnPlayerActivate");
+		NotificationCentre.AddObserver (this, "OnBattleBegin");
 
 		GetPlayer ();
 	}
@@ -49,26 +50,24 @@ public class PlayRoomPlayerController : MonoBehaviour
 			gun.enabled = false;
 			SetPlayerPosRot(new Vector3 (21.5f,0,-1), new Vector3 (0,180,0));
 
-			yield return new WaitForSeconds (1.5f);
+			yield return new WaitForSeconds (1);
 
-			/*
-			Quaternion rotA = player.transform.rotation;
-			Quaternion rotB = Quaternion.Euler (0,90,0);
-			float timer = 0;
-			while (true)
-			{
-				player.transform.rotation = Quaternion.Lerp (rotA, rotB, timer / 0.5f);
-				
-				if (timer >= 0.5f)
-					break;
-				
-				timer += Time.deltaTime;
-				yield return null;
-			}
-			*/
-			Debug.Log ("About to call MovLocRot");
+			ParticleController.Exclamation (player.transform.position, 2);
+
+			yield return new WaitForSeconds(0.5f);
+
 			yield return StartCoroutine(CustomUtilities.MovLocRot(player, Vector3.zero, new Vector3(0,90,0), 0.5f));
+
+			yield return new WaitForSeconds (0.3f);
+
+			NotificationCentre.PostNotification (this, "OnEnemyAppear");
 		}
+	}
+
+
+	void OnBattleBegin ()
+	{
+		if (gun) { gun.enabled = true; }
 	}
 
 

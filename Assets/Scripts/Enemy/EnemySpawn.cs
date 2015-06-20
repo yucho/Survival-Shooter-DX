@@ -42,13 +42,46 @@ public class EnemySpawn : MonoBehaviour
 		}
 	}
 
-	public void Spawn ()
+	public IEnumerator EnemyRush (int number)
+	{
+		// Spawn number of enemies in random interval
+		float interval = Random.Range (2f, 10f);
+
+		while (true)
+		{
+			yield return new WaitForSeconds (interval);
+
+			if (PlayRoomEnemyController.spawnNumber >= number)
+				break;
+
+			bool success = Spawn ();
+			if (success)
+			{
+				PlayRoomEnemyController.spawnNumber ++;
+				PlayRoomEnemyController.enemyNumber ++;
+
+				// Spawn succeeded, so make interval long.
+				interval = Random.Range (2f, 10f);
+			}
+			else
+			{
+				// Spawn failed, so make interval short.
+				interval = Random.Range (0.5f, 2f);
+			}
+		}
+	}
+
+	public bool Spawn ()
 	{
 		int index = Random.Range (0, enemies.Count);
 
 		if (isPlayerDistant)
 		{
 			Instantiate (enemies [index], transform.position, transform.rotation);
+
+			return true;
 		}
+
+		return false;
 	}
 }

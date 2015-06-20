@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\CustomStandaloneInputModule.cs" />
      <Compile Include="Assets\Scripts\DecalPainter.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyEventMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHitBox.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\Managers\ExceptionHandler.cs" />
      <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
+     <Compile Include="Assets\Scripts\Managers\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Managers\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\Managers\PauseManager.cs" />
      <Compile Include="Assets\Scripts\Managers\PlayerPrefsKeys.cs" />
@@ -83,6 +85,7 @@
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomGunCollider.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomPlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomPlayerEventController.cs" />
+     <Compile Include="Assets\Scripts\PlayRoom\PlayRoomVFXCameraController.cs" />
      <Compile Include="Assets\Scripts\Player\HealthPoint.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

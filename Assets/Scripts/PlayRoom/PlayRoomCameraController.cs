@@ -9,7 +9,7 @@ using System.Collections;
 public class PlayRoomCameraController : MonoBehaviour
 {
 
-	//private GameObject player;
+	private GameObject player;
 	private GameObject pe;
 
 	private CameraMovement cam;
@@ -21,11 +21,15 @@ public class PlayRoomCameraController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnPickUpGun");
 		NotificationCentre.AddObserver (this, "OnHoldingGunHigh");
 		NotificationCentre.AddObserver (this, "OnPlayerActivate");
+		NotificationCentre.AddObserver (this, "OnEnemyAppear");
+		NotificationCentre.AddObserver (this, "OnBattleBegin");
 
-		//player = GameObject.FindWithTag ("Player");
+		player = GameObject.FindWithTag ("Player");
 		pe = GameObject.FindWithTag ("PlayerEvent");
 
 		cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement> ();
+		if (cam)
+			cam.gameObject.SetActive (true);
 	}
 
 
@@ -117,6 +121,33 @@ public class PlayRoomCameraController : MonoBehaviour
 	void OnPlayerActivate ()
 	{
 		SetCamPosRot (new Vector3 (21.5f,0.5f,-3), new Vector3 (-5,0,0));
+	}
+
+
+	void OnEnemyAppear ()
+	{
+		cam.gameObject.SetActive (false);
+	}
+
+
+	void OnBattleBegin ()
+	{
+		if (cam && player)
+		{
+			SetCamPosRot(new Vector3 (0, 6, -7), new Vector3(40,0,0));
+
+			cam.gameObject.SetActive (true);
+			cam.SetCameraOffset (new Vector3 (0, 5, -7));
+			cam.SetCameraTarget (player.transform);
+			cam.SetCameraFollow (true);
+
+
+		}
+	}
+
+
+	IEnumerator ClickToShoot ()
+	{
 	}
 
 

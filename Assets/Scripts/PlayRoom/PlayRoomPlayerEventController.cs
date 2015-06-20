@@ -63,7 +63,13 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 			a.SetTrigger ("Wake");
 		
 
-			yield return new WaitForSeconds (7);
+			yield return new WaitForSeconds (6);
+
+			Vector3 question = pe.transform.position;
+			question.y += 1;
+			ParticleController.Question (question, 1);
+
+			yield return new WaitForSeconds (1);
 
 			// Player can't turn along the mouse pointer.
 			PlayerMovement pm = pe.GetComponent<PlayerMovement> ();
@@ -88,7 +94,7 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 				a.SetTrigger ("Standby");
 				yield return new WaitForSeconds (2);
 				a.SetTrigger ("Crouch");
-				yield return new WaitForSeconds (3);
+				yield return new WaitForSeconds (2);
 
 				a.SetTrigger ("Raise");
 				NotificationCentre.PostNotification (this, "OnHoldingGunHigh");

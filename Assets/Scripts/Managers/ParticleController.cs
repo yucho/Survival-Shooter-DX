@@ -30,6 +30,11 @@ public class ParticleController : MonoBehaviour
 			instance = this;
 	}
 
+	void OnApplicationQuit ()
+	{
+		instance = null;
+	}
+
 	public static void Exclamation (Vector3 position, float y = 0)
 	{
 		Instance.StartCoroutine (PlaySoundDelayed ("OnExclamation", 0.1f));

@@ -41,6 +41,12 @@ public class PlayRoomBGMController : MonoBehaviour
 	public AudioClip pauseExit;
 	public float pauseExitVolume;
 
+	public AudioClip crosshairAppear;
+	public float crosshairAppearVolume;
+
+	public AudioClip cannonFire;
+	public float cannonFireVolume;
+
 
 	private AudioSource src;
 	private AudioSource one;
@@ -61,6 +67,8 @@ public class PlayRoomBGMController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnQuestion");
 		NotificationCentre.AddObserver (this, "OnPauseEnter");
 		NotificationCentre.AddObserver (this, "OnPauseExit");
+		NotificationCentre.AddObserver (this, "OnCrosshairAppear");
+		NotificationCentre.AddObserver (this, "OnCannonFire");
 
 		src = GetComponent<AudioSource> ();
 		one = gameObject.AddComponent<AudioSource> () as AudioSource;
@@ -160,6 +168,16 @@ public class PlayRoomBGMController : MonoBehaviour
 	void OnPauseExit ()
 	{
 		Play (pause, pauseExit, pauseExitVolume, loop: false);
+	}
+
+	void OnCrosshairAppear ()
+	{
+		PlayOneShot (crosshairAppear, crosshairAppearVolume);
+	}
+
+	void OnCannonFire ()
+	{
+		PlayOneShot (cannonFire, cannonFireVolume);
 	}
 
 	void Play (AudioClip clip, float volume = 1, float delay = 0, bool loop = true)

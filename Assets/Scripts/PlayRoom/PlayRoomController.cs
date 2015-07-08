@@ -15,11 +15,17 @@ public class PlayRoomController : MonoBehaviour
 
 	void Start ()
 	{
+		// Deactivate intro event for debug purpose:
+		PlayerPrefs.SetString(PlayerPrefsKeys.PREV_SCENE, "None");
+		NotificationCentre.PostNotification (this, "ActivateCannon"); // Debug the cannon.
+
 		//
 		//  Avoid notifying on Awake () because observers might register on Start ().
 		//
 
 		NotificationCentre.PostNotification (this, "PauseAllow");
+
+		MissionManager.UpdateMission ("None");
 
 		switch (PlayerPrefs.GetString (PlayerPrefsKeys.PREV_SCENE))
 		{

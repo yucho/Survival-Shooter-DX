@@ -23,6 +23,8 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnPlayerActivate");
 		
 		GetPlayer ();
+		if (pe)
+			pe.SetActive (false);
 	}
 	
 	
@@ -52,6 +54,14 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 			{
 				a.SetTrigger ("Sleep");
 			}
+
+			// Player can't move or turn along the mouse pointer.
+			PlayerMovement pm = pe.GetComponent<PlayerMovement> ();
+			if (pm)
+			{
+				pm.FacePointer (false);
+				pm.CanMove (false);
+			}
 		}
 	}
 
@@ -70,11 +80,6 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 			ParticleController.Question (question, 1);
 
 			yield return new WaitForSeconds (1);
-
-			// Player can't turn along the mouse pointer.
-			PlayerMovement pm = pe.GetComponent<PlayerMovement> ();
-			if (pm)
-				pm.FacePointer (false);
 
 			NotificationCentre.PostNotification (this, "OnIntroEventExit");
 

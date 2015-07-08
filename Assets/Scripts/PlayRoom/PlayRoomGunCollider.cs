@@ -14,10 +14,18 @@ public class PlayRoomGunCollider : MonoBehaviour
 		c = GetComponent<SphereCollider> ();
 		eventTriggered = false;
 
+		NotificationCentre.AddObserver (this, "OnIntroEvent");
 		NotificationCentre.AddObserver (this, "OnHoldingGunHigh");
 		NotificationCentre.AddObserver (this, "Continue");
+
+		gameObject.SetActive (false);
 	}
 
+
+	void OnIntroEvent ()
+	{
+		gameObject.SetActive (true);
+	}
 
 	void OnEventEnter ()
 	{

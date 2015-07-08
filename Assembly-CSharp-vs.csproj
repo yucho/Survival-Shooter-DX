@@ -46,6 +46,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
      <Compile Include="Assets\Fantasy Skybox FREE\Scripts\FSPlayer.cs" />
      <Compile Include="Assets\Heureka\HeurekaShared\Extensions.cs" />
      <Compile Include="Assets\Heureka\HeurekaShared\Singleton.cs" />
@@ -55,18 +72,24 @@
      <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\MobileInput.cs" />
      <Compile Include="Assets\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
      <Compile Include="Assets\MobileInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\CustomStandaloneInputModule.cs" />
      <Compile Include="Assets\Scripts\DecalPainter.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BallisticProjectile.cs" />
+     <Compile Include="Assets\Scripts\Enemy\CannonballCrosshair.cs" />
+     <Compile Include="Assets\Scripts\Enemy\DetonatorHitBox.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyEventMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHitBox.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ExplosiveCannonball.cs" />
      <Compile Include="Assets\Scripts\Enemy\MovementTrackPlayer.cs" />
      <Compile Include="Assets\Scripts\Managers\DisplayTextCenter.cs" />
      <Compile Include="Assets\Scripts\Managers\ExceptionHandler.cs" />
      <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MissionManager.cs" />
      <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
      <Compile Include="Assets\Scripts\Managers\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Managers\ParticleManager.cs" />
@@ -80,6 +103,7 @@
      <Compile Include="Assets\Scripts\PlayRoom\HowToPlay.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomBGMController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomCameraController.cs" />
+     <Compile Include="Assets\Scripts\PlayRoom\PlayRoomCannonController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomEnemyController.cs" />
      <Compile Include="Assets\Scripts\PlayRoom\PlayRoomGunCollider.cs" />
@@ -128,6 +152,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionHigh.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
@@ -137,10 +162,12 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionLow.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionMed.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Heureka\AssetHunter\Readme.txt" />
@@ -185,7 +212,9 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\PorglezompPyroclastics\README.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
@@ -202,6 +231,9 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="DLLTest">
+ <HintPath>C:/Users/Public/Documents/Unity Projects/Survival Shooter DX/Assets/Plugins/DLLTest.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

@@ -183,11 +183,8 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 		NotificationCentre.PostNotification (this, "OnFadeIn");
 		NotificationCentre.PostNotification (this, "OnEventExit");
 		NotificationCentre.PostNotification (this, "OnBattleBegin");
+
+		MissionManager.UpdateMission ("Survive  the  horde.");
 	}
 
-
-	IEnumerator FloatVFX ()
-	{
-		yield return null;
-	}
 }

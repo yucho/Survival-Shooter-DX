@@ -29,7 +29,13 @@ public class PlayRoomCameraController : MonoBehaviour
 
 		cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement> ();
 		if (cam)
+		{
 			cam.gameObject.SetActive (true);
+			cam.SetCameraOffset (new Vector3 (0, 5, -7));
+			cam.SetCameraTarget (player.transform);
+			cam.SetCameraFollow (true);
+			SetCamPosRot(new Vector3 (0, 6, -7), new Vector3(40,0,0));
+		}
 	}
 
 
@@ -90,6 +96,7 @@ public class PlayRoomCameraController : MonoBehaviour
 			}
 
 			NotificationCentre.PostNotification (this, "DisplayHowToPlay");
+			MissionManager.UpdateMission ("Search  the  room  for  something  useful.");
 		}
 	}
 
@@ -141,13 +148,22 @@ public class PlayRoomCameraController : MonoBehaviour
 			cam.SetCameraTarget (player.transform);
 			cam.SetCameraFollow (true);
 
-
+			StartCoroutine (ClickToShoot ());
 		}
 	}
 
 
 	IEnumerator ClickToShoot ()
 	{
+		Hashtable table = new Hashtable {
+			{ "TextAnchor", "UpperCenter" },
+			{ "Text", "Click  to  shoot  enemies!!" }
+		};
+		NotificationCentre.PostNotification (this, "DisplayText", table);
+
+		yield return new WaitForSeconds(3);
+
+		NotificationCentre.PostNotification (this, "HideText");
 	}
 
 

@@ -139,5 +139,19 @@ public class PlayRoomEnemyController : MonoBehaviour
 		{
 			StartCoroutine(spawnPoint.EnemyRush (20));
 		}
+
+		StartCoroutine (OnEnemyRushOver ());
+	}
+
+
+	IEnumerator OnEnemyRushOver ()
+	{
+		// Wait until all enemies are dead.
+		while (enemyNumber > 0)
+		{
+			yield return null;
+		}
+
+
 	}
 }

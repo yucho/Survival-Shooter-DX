@@ -31,6 +31,13 @@ public class EnemyHealth : MonoBehaviour
 		enemyAudio = gameObject.AddComponent<AudioSource> ();
 		enemyAudio.loop = false;
 		enemyAudio.playOnAwake = false;
+
+		// Listen to annihilation command, which instantly destroys all enemies.
+		NotificationCentre.AddObserver (this, "OnDestroyAllEnemies");
+
+		// Initialize AudioQueue
+		AudioQueue.AddData (hurtClip, 0.1f);
+		AudioQueue.AddData (deathClip, 0.1f);
     }
 
 
@@ -50,8 +57,9 @@ public class EnemyHealth : MonoBehaviour
             return;
 		}
 
-		enemyAudio.clip = hurtClip;
-        enemyAudio.Play ();
+		//enemyAudio.clip = hurtClip;
+        //enemyAudio.Play ();
+		AudioQueue.PlayOneShot (enemyAudio, hurtClip); // call custom method that prevents audio overlap.
 
         currentHealth -= amount;
             
@@ -77,8 +85,9 @@ public class EnemyHealth : MonoBehaviour
 
         anim.SetTrigger ("Die");
 
-        enemyAudio.clip = deathClip;
-        enemyAudio.Play ();
+        //enemyAudio.clip = deathClip;
+        //enemyAudio.Play ();
+		AudioQueue.PlayOneShot (enemyAudio, deathClip); // call custom method that prevents audio overlap.
     }
 
 
@@ -88,8 +97,15 @@ public class EnemyHealth : MonoBehaviour
         GetComponent <Rigidbody> ().isKinematic = true;
         isShrinking = true;
 
+		NotificationCentre.PostNotification (this, "ReportEnemyDeath");
         Destroy (gameObject, 2f);
     }
+
+	void OnDestroyAllEnemies ()
+	{
+		NotificationCentre.PostNotification (this, "ReportEnemyDeath");
+		Destroy (gameObject);
+	}
 
 	void Shrink ()
 	{

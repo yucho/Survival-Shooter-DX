@@ -6,6 +6,17 @@ public class ExplosiveCannonball : MonoBehaviour
 {
 	public GameObject explosionPrefab;
 
+	void Awake ()
+	{
+		NotificationCentre.AddObserver (this, "OnEventEnter");
+	}
+
+	void OnEvententer ()
+	{
+		// Immediately destroy itself on event enter.
+		Destroy (this.gameObject);
+	}
+
 	void OnCollisionEnter (Collision collision)
 	{
 		//Debug.Log ("Collision with " + LayerMask.LayerToName(collision.collider.gameObject.layer) + "object");

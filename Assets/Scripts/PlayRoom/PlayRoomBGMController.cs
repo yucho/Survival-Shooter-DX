@@ -47,6 +47,24 @@ public class PlayRoomBGMController : MonoBehaviour
 	public AudioClip cannonFire;
 	public float cannonFireVolume;
 
+	public AudioClip gooey1;
+	public float gooey1Volume;
+
+	public AudioClip gooey2;
+	public float gooey2Volume;
+
+	public AudioClip zombunnyLaugh;
+	public float zombunnyLaughVolume;
+
+	public AudioClip missionClear;
+	public float missionClearVolume;
+
+	public AudioClip igniteCannon;
+	public float igniteCannonVolume;
+
+	public AudioClip playerDeath;
+	public float playerDeathVolume;
+
 
 	private AudioSource src;
 	private AudioSource one;
@@ -69,6 +87,12 @@ public class PlayRoomBGMController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnPauseExit");
 		NotificationCentre.AddObserver (this, "OnCrosshairAppear");
 		NotificationCentre.AddObserver (this, "OnCannonFire");
+		NotificationCentre.AddObserver (this, "OnGooey1");
+		NotificationCentre.AddObserver (this, "OnGooey2");
+		NotificationCentre.AddObserver (this, "OnZombunnyLaugh");
+		NotificationCentre.AddObserver (this, "OnMissionClear");
+		NotificationCentre.AddObserver (this, "OnIgniteCannon");
+		NotificationCentre.AddObserver (this, "OnPlayerDeath");
 
 		src = GetComponent<AudioSource> ();
 		one = gameObject.AddComponent<AudioSource> () as AudioSource;
@@ -178,6 +202,36 @@ public class PlayRoomBGMController : MonoBehaviour
 	void OnCannonFire ()
 	{
 		PlayOneShot (cannonFire, cannonFireVolume);
+	}
+
+	void OnGooey1 ()
+	{
+		PlayOneShot (gooey1, gooey1Volume);
+	}
+
+	void OnGooey2 ()
+	{
+		PlayOneShot (gooey2, gooey2Volume);
+	}
+
+	void OnZombunnyLaugh ()
+	{
+		PlayOneShot (zombunnyLaugh, zombunnyLaughVolume);
+	}
+
+	void OnMissionClear ()
+	{
+		PlayOneShot (missionClear, missionClearVolume);
+	}
+
+	void OnIgniteCannon ()
+	{
+		PlayOneShot (igniteCannon, igniteCannonVolume);
+	}
+
+	void OnPlayerDeath ()
+	{
+		PlayOneShot (playerDeath, playerDeathVolume);
 	}
 
 	void Play (AudioClip clip, float volume = 1, float delay = 0, bool loop = true)

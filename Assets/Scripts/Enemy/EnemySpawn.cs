@@ -58,7 +58,6 @@ public class EnemySpawn : MonoBehaviour
 			if (success)
 			{
 				PlayRoomEnemyController.spawnNumber ++;
-				PlayRoomEnemyController.enemyNumber ++;
 
 				// Spawn succeeded, so make interval long.
 				interval = Random.Range (2f, 10f);
@@ -75,9 +74,10 @@ public class EnemySpawn : MonoBehaviour
 	{
 		int index = Random.Range (0, enemies.Count);
 
-		if (isPlayerDistant)
+		if (isPlayerDistant && PlayRoomEnemyController.enemyNumber < SSGlobals.MAX_NUM_ENEMY)
 		{
 			Instantiate (enemies [index], transform.position, transform.rotation);
+			PlayRoomEnemyController.enemyNumber ++;
 
 			return true;
 		}

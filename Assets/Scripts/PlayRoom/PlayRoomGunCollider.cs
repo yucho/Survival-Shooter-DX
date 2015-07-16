@@ -18,13 +18,15 @@ public class PlayRoomGunCollider : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnHoldingGunHigh");
 		NotificationCentre.AddObserver (this, "Continue");
 
-		gameObject.SetActive (false);
+		// Activate only in new game.
+		SetActiveGun (false);
+
 	}
 
 
 	void OnIntroEvent ()
 	{
-		gameObject.SetActive (true);
+		SetActiveGun (true);
 	}
 
 	void OnEventEnter ()
@@ -35,6 +37,20 @@ public class PlayRoomGunCollider : MonoBehaviour
 	void OnEventExit ()
 	{
 		c.enabled = true;
+	}
+
+	void SetActiveGun (bool active)
+	{
+		SetActiveChildren (active);
+		c.enabled = active;
+	}
+
+	void SetActiveChildren (bool active)
+	{
+		foreach (Transform child in transform)
+		{
+			child.gameObject.SetActive (active);
+		}
 	}
 
 

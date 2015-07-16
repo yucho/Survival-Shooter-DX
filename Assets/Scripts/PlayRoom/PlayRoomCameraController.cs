@@ -23,6 +23,9 @@ public class PlayRoomCameraController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnPlayerActivate");
 		NotificationCentre.AddObserver (this, "OnEnemyAppear");
 		NotificationCentre.AddObserver (this, "OnBattleBegin");
+		NotificationCentre.AddObserver (this, "OnZoomInCannon");
+		NotificationCentre.AddObserver (this, "OnCameraNormalize");
+		NotificationCentre.AddObserver (this, "OnUpdatePlayer");
 
 		player = GameObject.FindWithTag ("Player");
 		pe = GameObject.FindWithTag ("PlayerEvent");
@@ -32,7 +35,7 @@ public class PlayRoomCameraController : MonoBehaviour
 		{
 			cam.gameObject.SetActive (true);
 			cam.SetCameraOffset (new Vector3 (0, 5, -7));
-			cam.SetCameraTarget (player.transform);
+			cam.SetCameraTarget (player);
 			cam.SetCameraFollow (true);
 			SetCamPosRot(new Vector3 (0, 6, -7), new Vector3(40,0,0));
 		}
@@ -79,7 +82,7 @@ public class PlayRoomCameraController : MonoBehaviour
 		if (pe && cam)
 		{
 			cam.SetCameraOffset (new Vector3 (0, 5, -7));
-			cam.SetCameraTarget (pe.transform);
+			cam.SetCameraTarget (pe);
 			cam.SetCameraFollow (true);
 
 			float timer = 0;
@@ -139,16 +142,20 @@ public class PlayRoomCameraController : MonoBehaviour
 
 	void OnBattleBegin ()
 	{
+		OnCameraNormalize ();
+		StartCoroutine (ClickToShoot ());
+	}
+
+	void OnCameraNormalize ()
+	{
 		if (cam && player)
 		{
 			SetCamPosRot(new Vector3 (0, 6, -7), new Vector3(40,0,0));
-
+			
 			cam.gameObject.SetActive (true);
 			cam.SetCameraOffset (new Vector3 (0, 5, -7));
-			cam.SetCameraTarget (player.transform);
+			cam.SetCameraTarget (player);
 			cam.SetCameraFollow (true);
-
-			StartCoroutine (ClickToShoot ());
 		}
 	}
 
@@ -166,6 +173,77 @@ public class PlayRoomCameraController : MonoBehaviour
 		NotificationCentre.PostNotification (this, "HideText");
 	}
 
+
+	IEnumerator OnZoomInCannon ()
+	{
+		if (cam)
+		{
+			cam.SetCameraFollow (false);
+			CustomUtilities.SetPosRot (cam.gameObject, new Vector3(0,1,-3), Vector3.zero);
+		}
+
+		NotificationCentre.PostNotification (this, "OnFadeIn");
+		NotificationCentre.PostNotification (this, "OnBGMFadeIn");
+		
+		yield return new WaitForSeconds (3);
+
+		// Final Pos (3,16,24) Rot (25,30,0)
+		if (cam)
+		{
+			yield return StartCoroutine (CustomUtilities.MovLocRot(cam.gameObject, new Vector3(3,15,27), new Vector3(25,30,0), 2));
+		}
+
+		yield return new WaitForSeconds (1);
+
+		NotificationCentre.PostNotification (this, "OnZombunnyLaugh");
+
+		yield return new WaitForSeconds (0.5f);
+
+		NotificationCentre.PostNotification (this, "OnIgniteCannon");
+
+		yield return new WaitForSeconds (0.5f);
+
+		if (cam)
+		{
+			// Final Pos (3,16,24) Rot (35,45,0)
+			yield return StartCoroutine (CustomUtilities.MovLocRot(cam.gameObject, Vector3.zero, new Vector3(10,15,0), 0.7f));
+			// Final Pos (4.2,16.8,22) Rot (35,5,0)
+			yield return StartCoroutine (CustomUtilities.MovLocRot(cam.gameObject, new Vector3(1.2f,0.8f,-2), new Vector3(0,-40,0), 0.8f));
+		}
+
+		NotificationCentre.PostNotification (this, "OnFadeOut");
+
+		yield return new WaitForSeconds (1);
+
+		OnCameraNormalize ();
+		NotificationCentre.PostNotification (this, "OnEventExit");
+		NotificationCentre.PostNotification (this, "OnEnemyRushOverExit");
+		NotificationCentre.PostNotification (this, "OnNaturalSpawn");
+		NotificationCentre.PostNotification (this, "OnFadeIn");
+		MissionManager.UpdateMission ("This  room  is  a  nightmare!  Find  the  way  out.");
+
+		yield return new WaitForSeconds (3);
+
+		NotificationCentre.PostNotification (this, "ActivateCannon");
+	}
+
+
+	void OnUpdatePlayer ()
+	{
+		player = GameObject.FindWithTag ("Player");
+
+		// Glide camera in.
+		if (player && cam)
+		{
+			cam.SetCameraOffset (new Vector3 (0, 5, -7));
+			cam.SetCameraTarget (player);
+			cam.SetCameraFollow (true);
+
+			//OnCameraNormalize ();
+
+			CustomUtilities.SetPosRot (cam.gameObject, player.transform.position + new Vector3(-2,6,-6), new Vector3(40,0,0));
+		}
+	}
 
 
 	void SetCamPosRot (Vector3 pos, Vector3 euler)

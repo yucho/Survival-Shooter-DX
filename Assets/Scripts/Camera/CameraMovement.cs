@@ -5,29 +5,21 @@ using System.Collections;
 public class CameraMovement : MonoBehaviour
 {
 
-	public Transform target;
+	public GameObject target;
+	public Vector3 offset;
 	public float smoothness;
-
-	private bool follow;
-	private Vector3 offset = Vector3.zero;
-	
-
-	void Start ()
-	{
-		if (target)
-			offset = transform.position - target.position;
-
-		follow = true;
-	}
+	public bool follow;
 
 
 	void FixedUpdate ()
 	{
 		if (follow && target)
 		{
-			Vector3 targetCamPos = target.position + offset;
+			Vector3 targetCamPos = target.transform.position + offset;
 
-			transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothness);
+			transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothness * Time.deltaTime);
+
+			//Debug.Log ("Pos:" + transform.position + ", TargetPos:" + targetCamPos + ", Offset:" + offset);
 		}
 	}
 
@@ -36,7 +28,7 @@ public class CameraMovement : MonoBehaviour
 		this.follow = follow;
 	}
 
-	public void SetCameraTarget (Transform newTarget)
+	public void SetCameraTarget (GameObject newTarget)
 	{
 		target = newTarget;
 	}

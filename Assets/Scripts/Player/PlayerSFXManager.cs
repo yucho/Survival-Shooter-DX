@@ -39,11 +39,6 @@ public class PlayerSFXManager : MonoBehaviour
 		heartSource.playOnAwake = false;
 	}
 
-	void Update ()
-	{
-		// Do stuff
-	}
-
 	public void PlayerHurtVoice (float delay = 0f)
 	{
 		hurtSource.PlayDelayed (delay);

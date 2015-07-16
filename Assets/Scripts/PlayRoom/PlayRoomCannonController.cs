@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayRoomCannonController : MonoBehaviour
 {
 	public GameObject cannonBarrel;
+	public GameObject ignition;
 	public Transform barrelEnd;
 	public float coolDown = 3f;
 
@@ -13,24 +14,48 @@ public class PlayRoomCannonController : MonoBehaviour
 	{
 		NotificationCentre.AddObserver (this, "ActivateCannon");
 		NotificationCentre.AddObserver (this, "DeactivateCannon");
+		NotificationCentre.AddObserver (this, "OnEventEnter");
+		NotificationCentre.AddObserver (this, "OnIgniteCannon");
+
+		OnPutOutCannon ();
 	}
 
 
 	void ActivateCannon ()
 	{
+		CancelInvoke ("Fire");
 		InvokeRepeating ("Fire", 0, coolDown);
 		cannonActive = true;
+		OnIgniteCannon ();
 	}
 
 	void DeactivateCannon ()
 	{
 		CancelInvoke ("Fire");
 		cannonActive = false;
+		OnPutOutCannon ();
+	}
+
+	void OnEventEnter ()
+	{
+		DeactivateCannon ();
 	}
 
 	public bool IsCannonActive ()
 	{
 		return cannonActive;
+	}
+
+	void OnIgniteCannon ()
+	{
+		if (ignition)
+			ignition.SetActive (true);
+	}
+
+	void OnPutOutCannon ()
+	{
+		if (ignition)
+			ignition.SetActive (false);
 	}
 
 

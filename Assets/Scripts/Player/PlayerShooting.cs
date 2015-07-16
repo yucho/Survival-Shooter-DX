@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
 	public float gunVolume = 0.8f;
 
 
+	private bool canShoot;
     private float timer;
     private Ray shootRay;
     private RaycastHit shootHit;
@@ -22,6 +23,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Awake ()
     {
+		canShoot = true;
         shootableMask = LayerMask.GetMask ("Shootable", "Enemy");
         gunParticles = GetComponent<ParticleSystem> ();
         gunLine = GetComponent <LineRenderer> ();
@@ -29,6 +31,8 @@ public class PlayerShooting : MonoBehaviour
 		gunAudio.clip = gunClip;
 		gunAudio.playOnAwake = false;
         gunLight = GetComponent<Light> ();
+
+		NotificationCentre.AddObserver (this, "OnPlayerDeath");
     }
 
 
@@ -36,7 +40,7 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+		if(canShoot && Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }
@@ -48,7 +52,13 @@ public class PlayerShooting : MonoBehaviour
     }
 
 
-    public void DisableEffects ()
+	public void EnableGun (bool enable)
+	{
+		canShoot = enable;
+	}
+
+
+    void DisableEffects ()
     {
         gunLine.enabled = false;
         gunLight.enabled = false;
@@ -75,11 +85,17 @@ public class PlayerShooting : MonoBehaviour
 
         if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
         {
+			FlammableBlock block = shootHit.collider.GetComponent <FlammableBlock> ();
             EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
-            if(enemyHealth != null)
+
+            if(enemyHealth)
             {
                 enemyHealth.TakeDamage (damagePerShot, shootHit.point);
             }
+			else if (block)
+			{
+				block.TakeHit (1, shootHit.point);
+			}
             gunLine.SetPosition (1, shootHit.point);
         }
         else
@@ -87,4 +103,11 @@ public class PlayerShooting : MonoBehaviour
             gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
         }
     }
+
+
+	// Disable gun on player death.
+	void OnPlayerDeath ()
+	{
+		EnableGun (false);
+	}
 }

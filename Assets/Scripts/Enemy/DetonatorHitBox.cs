@@ -55,5 +55,12 @@ public class DetonatorHitBox : MonoBehaviour
 				HP.TakeDamage (damage * 2, Vector3.zero);
 			}
 		}
+
+		// If it's flammable block.
+		FlammableBlock block = other.gameObject.GetComponent<FlammableBlock> ();
+		if (block)
+		{
+			block.TakeHit (damage);
+		}
 	}
 }

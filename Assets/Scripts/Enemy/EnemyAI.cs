@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
 	private bool 			targetInRange;
 	private bool			attackEnd;
 	private bool 			isDead;
+	private bool			isGameOver;
 
 
 	void Awake ()
@@ -40,10 +41,17 @@ public class EnemyAI : MonoBehaviour
 		timer = 0f;
 		attackEnd = false;
 		isDead = false;
+		isGameOver = false;
 
 		audioSrc = gameObject.AddComponent<AudioSource> ();
 		audioSrc.playOnAwake = false;
 		audioSrc.loop = false;
+
+		// Stay idle when player die.
+		NotificationCentre.AddObserver (this, "OnPlayerDeath");
+
+		// Reassign player object when new one is created.
+		NotificationCentre.AddObserver (this, "OnUpdatePlayer");
 	}
 	
 	void Update ()
@@ -80,13 +88,13 @@ public class EnemyAI : MonoBehaviour
 				return;
 			}
 
-			if (! targetInRange)
+			if (! targetInRange && ! isGameOver)
 			{
 				nav.Resume ();
 				nav.SetDestination (player.position);
 				animator.SetBool ("IsWalking", true);
 			}
-			else if (targetInRange)
+			else if (targetInRange && ! isGameOver)
 			{
 				nav.Stop ();
 				animator.SetBool ("IsWalking", false);
@@ -155,5 +163,15 @@ public class EnemyAI : MonoBehaviour
 		audioSrc.clip = attackClip;
 		audioSrc.volume = attackVolume;
 		audioSrc.Play ();
+	}
+
+	void OnPlayerDeath ()
+	{
+		isGameOver = true;
+	}
+
+	void OnUpdatePlayer ()
+	{
+		player = GameObject.FindWithTag ("Player").transform;
 	}
 }

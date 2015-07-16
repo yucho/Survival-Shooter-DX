@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
 		NotificationCentre.AddObserver (this, "OnEventEnter");
 		NotificationCentre.AddObserver (this, "OnEventExit");
+		NotificationCentre.AddObserver (this, "OnPlayerDeath");
 	}
 
 	void OnEventEnter () { CanMove (false); }
@@ -123,5 +124,15 @@ public class PlayerMovement : MonoBehaviour
 
 		if (animator)
 			animator.SetBool ("IsWalking", walking);
+	}
+
+
+	void OnPlayerDeath ()
+	{
+		CanMove (false);
+		FacePointer (false);
+
+		if (animator)
+			animator.SetTrigger ("Die");
 	}
 }

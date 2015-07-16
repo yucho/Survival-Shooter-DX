@@ -7,6 +7,7 @@ using System.Collections;
 //
 public class PlayRoomPlayerController : MonoBehaviour
 {
+	public GameObject playerPrefab;
 
 	private GameObject player;
 	private PlayerShooting gun;
@@ -19,6 +20,9 @@ public class PlayRoomPlayerController : MonoBehaviour
 		NotificationCentre.AddObserver (this, "OnIntroEvent");
 		NotificationCentre.AddObserver (this, "OnPlayerActivate");
 		NotificationCentre.AddObserver (this, "OnBattleBegin");
+		NotificationCentre.AddObserver (this, "OnEnemyRushOver");
+		NotificationCentre.AddObserver (this, "OnEnemyRushOverExit");
+		NotificationCentre.AddObserver (this, "OnResumeFromCheckpoint");
 
 		GetPlayer ();
 	}
@@ -47,7 +51,7 @@ public class PlayRoomPlayerController : MonoBehaviour
 		if (player)
 		{
 			player.SetActive (true);
-			gun.enabled = false;
+			gun.EnableGun (false);
 			SetPlayerPosRot(new Vector3 (21.5f,0,-1), new Vector3 (0,180,0));
 
 			yield return new WaitForSeconds (1);
@@ -67,7 +71,56 @@ public class PlayRoomPlayerController : MonoBehaviour
 
 	void OnBattleBegin ()
 	{
-		if (gun) { gun.enabled = true; }
+		if (gun) { gun.EnableGun (true); }
+	}
+
+
+	IEnumerator OnEnemyRushOver ()
+	{
+		if (gun) { gun.EnableGun (false); }
+		yield return new WaitForSeconds (1);
+
+		if (player)
+		{
+			CustomUtilities.SetPosRot(player, Vector3.zero, new Vector3(0,180,0));
+		}
+
+		NotificationCentre.PostNotification (this, "OnZoomInCannon");
+	}
+
+	void OnEnemyRushOverExit ()
+	{
+		if (gun) { gun.EnableGun (true); }
+	}
+
+
+	IEnumerator OnResumeFromCheckpoint ()
+	{
+		if (player)
+		{
+			// Destroy the old player and instantiate the new.
+			Destroy (player);
+			player = Instantiate (playerPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+			gun = player.GetComponentInChildren<PlayerShooting> ();
+
+			switch (PlayerPrefs.GetString (PlayerPrefsKeys.CHECKPOINT))
+			{
+			case "FirstBattle":
+				player.SetActive (true);
+				gun.enabled = true;
+				SetPlayerPosRot(new Vector3 (21.5f,0,-1), new Vector3 (0,180,0));
+				break;
+			default:
+				player.SetActive (true);
+				gun.enabled = true;
+				SetPlayerPosRot(Vector3.zero, Vector3.zero);
+				break;
+			}
+
+			// Need to wait 1 frame for gameobject tag search to work.
+			yield return null;
+			NotificationCentre.PostNotification (this, "OnUpdatePlayer");
+		}
 	}
 
 

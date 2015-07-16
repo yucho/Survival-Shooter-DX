@@ -10,4 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Play Room.unity
   - enabled: 1
-    path: Assets/_Scenes/Toilet Room.unity
+    path: Assets/_Scenes/Toilet Room_backup.unity

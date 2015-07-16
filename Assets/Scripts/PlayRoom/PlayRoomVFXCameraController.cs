@@ -56,7 +56,8 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 			CustomUtilities.SetPosRot (vfxcam, new Vector3(3.5f,2,-2), new Vector3(20,-70,0));
 			yield return StartCoroutine (CustomUtilities.MovLocRot (vfxcam, new Vector3(-1.5f,-1.5f,2), new Vector3(-20,-20,0), 0.5f));
 
-			NotificationCentre.PostNotification (this, "OnSFXVFX1");
+			//NotificationCentre.PostNotification (this, "OnSFXVFX1");
+			NotificationCentre.PostNotification (this, "OnGooey1");
 
 			if (splashEffect)
 			{
@@ -65,6 +66,7 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 			}
 			
 			yield return new WaitForSeconds (0.1f);
+			NotificationCentre.PostNotification (this, "OnGooey1");
 			
 			if (splashEffect2)
 			{
@@ -73,6 +75,7 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 			}
 			
 			yield return new WaitForSeconds (0.1f);
+			NotificationCentre.PostNotification (this, "OnGooey2");
 			
 			if (splashEffect3)
 			{
@@ -108,12 +111,14 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 
 		yield return new WaitForSeconds (0.45f);
 
-		NotificationCentre.PostNotification (this, "OnSFXVFX2");
+		//NotificationCentre.PostNotification (this, "OnSFXVFX2");
 
 		if (vfxcam)
 		{
 			yield return StartCoroutine (CustomUtilities.MovLocRot (vfxcam, new Vector3(3,0.5f,5), Vector3.zero, 0.2f));
 		}
+
+		NotificationCentre.PostNotification (this, "OnGooey2");
 
 		if (splashEffect)
 		{
@@ -122,6 +127,7 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 		}
 		
 		yield return new WaitForSeconds (0.1f);
+		NotificationCentre.PostNotification (this, "OnGooey1");
 		
 		if (splashEffect2)
 		{
@@ -130,6 +136,7 @@ public class PlayRoomVFXCameraController : MonoBehaviour
 		}
 		
 		yield return new WaitForSeconds (0.1f);
+		NotificationCentre.PostNotification (this, "OnGooey1");
 		
 		if (splashEffect3)
 		{

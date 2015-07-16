@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,12 +18,19 @@ public class PlayRoomEnemyController : MonoBehaviour
 
     void Awake ()
     {
+		// Set max number of enemies allowed.
+		SSGlobals.MAX_NUM_ENEMY = 30;
+
 		spawnPoints = GetComponentsInChildren<EnemySpawn> ();
 
 		NotificationCentre.AddObserver (this, "OnEnemyAppear");
 		NotificationCentre.AddObserver (this, "OnZombearAppear");
 		NotificationCentre.AddObserver (this, "OnPanOut");
 		NotificationCentre.AddObserver (this, "OnBattleBegin");
+		NotificationCentre.AddObserver (this, "ReportEnemyDeath");
+		NotificationCentre.AddObserver (this, "OnPlayerDeath");
+		NotificationCentre.AddObserver (this, "OnNaturalSpawn");
+		NotificationCentre.AddObserver (this, "OnResumeFromCheckpoint");
 
 		if (zombunny) { zombunny.gameObject.SetActive (false); }
 		if (zombear) { zombear.gameObject.SetActive (false); }
@@ -37,6 +44,13 @@ public class PlayRoomEnemyController : MonoBehaviour
 			spawnPoint.SetActive (active);
 		}
     }
+
+
+	void ReportEnemyDeath ()
+	{
+		if (enemyNumber > 0)
+			enemyNumber--;
+	}
 
 
 	IEnumerator OnEnemyAppear ()
@@ -152,6 +166,70 @@ public class PlayRoomEnemyController : MonoBehaviour
 			yield return null;
 		}
 
+		NotificationCentre.PostNotification (this, "OnBGMFadeOut");
 
+		yield return new WaitForSeconds (1);
+
+		NotificationCentre.PostNotification (this, "OnMissionClear");
+		MissionManager.UpdateMission ("None.");
+
+		yield return new WaitForSeconds (1);
+
+		NotificationCentre.PostNotification (this, "OnEventEnter");
+		NotificationCentre.PostNotification (this, "OnEnemyRushOver");
+		NotificationCentre.PostNotification (this, "OnFadeOut");
+		PlayerPrefs.SetString (PlayerPrefsKeys.CHECKPOINT, "PuzzleSolving");
+
+		yield return new WaitForSeconds (1);
+
+		// Move ZombunnyEvent next to the cannon.
+		if (zombunny)
+		{
+			CustomUtilities.SetPosRot (zombunny.gameObject, new Vector3(4.3f,13.7f,28), new Vector3(0,180,0));
+			zombunny.gameObject.SetActive (true);
+			zombunny.followTarget = false;
+		}
+	}
+
+
+	void OnPlayerDeath ()
+	{
+		// Stop OnEnemyRushOver coroutine.
+		StopAllCoroutines ();
+
+		// Deactivate all spawn points.
+		foreach (EnemySpawn spawnPoint in spawnPoints)
+		{
+			spawnPoint.SetActive (false);
+		}
+	}
+
+
+	void OnNaturalSpawn ()
+	{
+		// Activate all spawn points.
+		foreach (EnemySpawn spawnPoint in spawnPoints)
+		{
+			spawnPoint.SetActive (true);
+		}
+	}
+
+
+	void OnResumeFromCheckpoint ()
+	{
+		NotificationCentre.PostNotification (this, "OnDestroyAllEnemies");
+		enemyNumber = 0; // unnecessary, but to be safe.
+
+		switch (PlayerPrefs.GetString (PlayerPrefsKeys.CHECKPOINT))
+		{
+		case "FirstBattle" :
+			OnBattleBegin ();
+			break;
+		case "PuzzleSolving" :
+			OnNaturalSpawn ();
+			break;
+		default:
+			break;
+		}
 	}
 }

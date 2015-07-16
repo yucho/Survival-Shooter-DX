@@ -133,7 +133,6 @@ public class PlayRoomPlayerEventController : MonoBehaviour
 
 
 
-
 	void SetPEPosRot (Vector3 pos, Vector3 euler)
 	{
 		pe.transform.position = pos;

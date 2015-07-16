@@ -5,14 +5,12 @@ public class EnemyHitBox : MonoBehaviour
 {
 	public int strength = 20;
 	public float knockBack = 10f; // better be less.
-
-	private Transform player;
+	
 	private HealthPoint playerHP;
 	private bool isActive;
 
 	void Awake ()
 	{
-		player = GameObject.FindWithTag ("Player").transform;
 		playerHP = GameObject.FindWithTag ("HealthPoint").GetComponent<HealthPoint> ();
 
 		isActive = false;
@@ -34,8 +32,8 @@ public class EnemyHitBox : MonoBehaviour
 	{
 		if (other.tag == "Player" && isActive)
 		{
-			Vector3 direction = (player.position - transform.position).normalized;
-			KnockBackPlayer (direction);
+			Vector3 direction = (other.transform.position - transform.position).normalized;
+			KnockBackPlayer (other.gameObject, direction);
 
 			Vector3 fromDirection = -direction;
 			playerHP.TakeDamage (strength, fromDirection);
@@ -44,7 +42,7 @@ public class EnemyHitBox : MonoBehaviour
 		}
 	}
 
-	void KnockBackPlayer (Vector3 direction)
+	void KnockBackPlayer (GameObject player, Vector3 direction)
 	{
 		direction.y = 0.5f;
 
